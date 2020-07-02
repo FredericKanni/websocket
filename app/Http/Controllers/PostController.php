@@ -10,8 +10,8 @@ class PostController extends Controller
 {
     public function index(){
         $event =new PostCreatedEvent(['name' => 'titre']);
-        event($event);
-      
+        // event($event);
+        broadcast($event)->toOthers();
         dd();
     }
 }

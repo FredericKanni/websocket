@@ -9,8 +9,13 @@ let e = new Echo({
 
 });
 
+//actualise /post
 e.channel('chan-demo')
-    .listen('PostCreatedEvent', (e) => {
+    .listen('PostCreatedEvent', function(e) {
         console.log(e)
     })
-console.log('top')
+
+$('#demo').click(function(e) {
+    e.preventDefault()
+    $.get('/post')
+})
