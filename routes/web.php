@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get ('/post',  'PostController@index');
+
+
 Route::prefix('/')->group(function(){
     Route::get('/', function () {
         return view('home.main');

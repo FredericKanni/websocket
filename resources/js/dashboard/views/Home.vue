@@ -33,7 +33,10 @@ friendsNav
     methods: {
         getDatas(){
                  apiServices.get('/api/users/'+this.currentUser.id+'/friends')  //envoie sur une route avec token
-                    .then(({ response }) => {
+                    // .then(({ response }) => {
+                    //     console.log(response)
+                    // })
+                         .then(( response ) => {
                         console.log(response)
                     })
                     .catch()
@@ -43,7 +46,7 @@ friendsNav
     created(){
   authenticationService.currentUser.subscribe(x => (this.currentUser =x));
     //    console.log(this.currentUser)
-    this.getDatas();
+    // this.getDatas();
     }
 
    

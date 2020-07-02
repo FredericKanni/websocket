@@ -16,7 +16,7 @@ class UserController extends Controller
     public function index($id)
     {
         $user= User::where('id', '=', $id)->first()->with('friends');
-
+return 'toto';
         return 
         //new UsersResource(
             $user
